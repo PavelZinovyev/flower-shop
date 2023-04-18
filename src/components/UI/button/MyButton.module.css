@@ -1,0 +1,33 @@
+.reactionsWrapper {
+  position: relative;
+  display: flex;
+  justify-content: start;
+  margin-top: 3px;
+  margin-left: 30px;
+  height: 50px;
+  width: 100%;
+}
+
+.likeButton {
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 26px;
+  background-image: url('../UI/img/like_button.png');
+}
+
+.likeButton:hover {
+  transform: scale(1.1);
+}
+
+.likeNum {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.myButtonBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row-reverse;
+}

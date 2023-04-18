@@ -1,0 +1,145 @@
+.product {
+  width: 382px;
+  border: 1px solid #d9d9d9;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 11px;
+  padding-top: 10px;
+  box-sizing: border-box;
+
+  &__image {
+    position: relative;
+    display: block;
+    height: 360px;
+  }
+}
+
+.image-switch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  &__item {
+    flex-grow: 1;
+    cursor: pointer;
+  }
+
+  &__img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+  }
+}
+
+.image-switch__item:first-child .image-switch__img {
+  opacity: 1;
+  z-index: -1;
+}
+
+.image-switch__item:hover .image-switch__img {
+  opacity: 1;
+  z-index: -1;
+}
+
+.image-switch__img img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-pagination {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  z-index: 30;
+  left: 0px;
+  bottom: -30px;
+  width: 100%;
+}
+
+.image-pagination__item {
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  margin: 0px 3px;
+  background-color: #c4c4c4;
+
+  &.active {
+    background-color: #359381;
+  }
+}
+
+.product__title {
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #4d4d4d;
+}
+
+a {
+  text-decoration: none;
+}
+
+.product-price {
+  display: flex;
+  align-items: center;
+  line-height: 30px;
+}
+
+.product-price__current {
+  font-size: 24px;
+  color: #4d4d4d;
+  margin-right: 20px;
+}
+
+.product-price__old {
+  font-size: 18px;
+  color: #808080;
+  text-decoration: line-through;
+}
+
+.product__cart_button {
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+
+  width: 100%;
+  height: 50px;
+  line-height: 1.5;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+  border: 1px solid transparent;
+  background-color: #359381;
+  color: white;
+  box-shadow: none;
+  cursor: pointer;
+
+  .fa-shopping-basket {
+    margin-right: 0.5rem;
+  }
+
+  &:hover {
+    box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(30, 171, 30, 0.9);
+    transition: color 200ms ease-in-out, background-color 200ms ease-in-out,
+      border-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+  }
+}
