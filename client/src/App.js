@@ -41,7 +41,7 @@ function App() {
         </div>
       </NavBar>
       <div className="content">
-        <h2>ВСЕ ЦВЕТОЧКИ</h2>
+        <ProductCard />
         <ProductCard />
         <ProductCard />
         {/* <button className="productCard__cartButton">

@@ -84,7 +84,7 @@ class ProductCard extends React.Component {
           <span className="product-price__current">500RUB.</span>
           <span className="product-price__old">800RUB.</span>
         </div>
-        <button className="product__cart_button">Добавить в корзину</button>
+        <button className="product__cart_button">В корзину</button>
       </article>
     );
   }
