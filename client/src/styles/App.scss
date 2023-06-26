@@ -1,0 +1,320 @@
+// .item-btn.calc {
+//   .fa-calculator {
+//     opacity: 0;
+//     margin-right: 12px;
+//     transition: all 200ms ease;
+//   }
+
+//   &:hover {
+//     .fa-calculator {
+//       opacity: 1;
+//     }
+//   }
+// }
+
+// .item-btn.forum {
+//   .fa-comments {
+//     opacity: 0;
+//     margin-right: 12px;
+//     transition: opacity 200ms ease;
+//   }
+
+//   &:hover {
+//     .fa-comments {
+//       opacity: 1;
+//     }
+//   }
+// }
+
+.App {
+  background-color: #fff4f4;
+}
+
+.headerLeft {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+
+  h3,
+  p {
+    margin: 0;
+  }
+
+  .headerInfo {
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    margin-top: 15px;
+  }
+}
+
+.btn-login {
+  font-size: 20px;
+  margin-right: 20px;
+  box-sizing: border-box;
+  width: 33px;
+  height: 33px;
+  border: 2px solid black;
+  border-radius: 26px;
+  background-color: transparent;
+  transition: all 100ms ease;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    border-color: #359381;
+    background-color: #359381;
+  }
+}
+
+.item-btn {
+  box-sizing: border-box;
+  padding: 9px;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 26px;
+  margin: 0px 20px;
+  background-color: #fff;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  transition: all 100ms ease;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    border-color: #359381 !important;
+    background-color: #359381;
+  }
+}
+
+.product {
+  margin-right: 20px;
+}
+
+.content {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  h1 {
+    margin: 0;
+  }
+}
+
+// .product {
+//   width: 382px;
+//   border: 1px solid #d9d9d9;
+//   background-color: #fff;
+//   border-radius: 4px;
+//   padding: 20px;
+//   padding-top: 10px;
+//   box-sizing: border-box;
+
+//   &__image {
+//     position: relative;
+//     display: block;
+//     // overflow: hidden;
+//     height: 360px; //162px
+//   }
+// }
+
+// .image-switch {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: 10;
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+
+//   &__item {
+//     flex-grow: 1;
+//     cursor: pointer;
+//   }
+
+//   &__img {
+//     position: absolute;
+//     left: 50%;
+//     top: 0;
+//     z-index: 2;
+//     width: 100%;
+//     height: 100%;
+//     transform: translateX(-50%);
+//     pointer-events: none;
+//     background-color: #fff;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     opacity: 0;
+//   }
+// }
+
+// .image-switch__item:first-child .image-switch__img {
+//   opacity: 1;
+//   z-index: -1;
+// }
+
+// .image-switch__item:hover .image-switch__img {
+//   opacity: 1;
+//   z-index: -1;
+// }
+
+// .image-switch__img img {
+//   display: block;
+//   max-width: 100%;
+//   height: 100%;
+//   object-fit: cover;
+// }
+
+// .image-pagination {
+//   position: absolute;
+//   display: flex;
+//   justify-content: center;
+//   padding: 0;
+//   z-index: 30;
+//   left: 0px;
+//   bottom: -30px;
+//   width: 100%;
+// }
+
+// .image-pagination__item {
+//   display: block;
+//   width: 4px;
+//   height: 4px;
+//   border-radius: 100%;
+//   margin: 0px 3px;
+//   background-color: #c4c4c4;
+// }
+
+// .product__title {
+//   margin-bottom: 8px;
+//   font-weight: 400;
+//   font-size: 24px;
+//   line-height: 30px;
+//   font-weight: 400;
+//   color: #4d4d4d;
+// }
+
+// a {
+//   text-decoration: none;
+// }
+
+// .product-price {
+//   display: flex;
+//   align-items: center;
+//   line-height: 30px;
+// }
+
+// .product-price__current {
+//   font-size: 24px;
+//   color: #4d4d4d;
+//   margin-right: 20px;
+// }
+
+// .product-price__old {
+//   font-size: 18px;
+//   color: #808080;
+//   text-decoration: line-through;
+// }
+
+// .product__cart_button {
+//   display: inline-block;
+//   text-align: center;
+//   margin-top: 10px;
+
+//   width: 100%;
+//   height: 50px;
+//   line-height: 1.5;
+//   font-size: 1rem;
+//   border-radius: 0.3125rem;
+//   border: 1px solid transparent;
+//   background-color: #359381;
+//   color: white;
+//   cursor: pointer;
+
+//   box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(30, 171, 30, 0.9);
+//   transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out,
+//     border-color 0.25s ease-in-out, box-shadow 0.2s ease-in-out;
+
+//   .fa-shopping-basket {
+//     margin-right: 0.5rem;
+//   }
+
+//   &:hover {
+//     box-shadow: none;
+//   }
+// }
+
+// .productCard__wrap {
+//   // position: relative;
+//   display: inline-block;
+//   justify-content: center;
+//   flex-flow: column;
+//   box-sizing: content-box;
+//   border: 1px solid #f8e8f8;
+//   border-radius: 26px;
+//   padding: 20px;
+//   width: 270px;
+//   height: 364px;
+//   transform: scale(1);
+//   transition: transform 100ms ease;
+//   cursor: pointer;
+
+//   &:hover {
+//     box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(200, 210, 200, 0.9);
+//     transform: scale(1.05);
+//     z-index: 100;
+//   }
+
+//   .productCard__imageWrap {
+//     position: relative;
+//     align-items: center;
+//   }
+
+//   .productCard__priceWrap {
+//     position: relative;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     // margin-bottom: 10px;
+//     bottom: 10px;
+//   }
+//   .productCard__price {
+//     display: inline-block;
+//     // flex-flow: column;
+//   }
+
+//   .productCard__cartButton {
+//     // position: relative;
+//     display: inline-block;
+//     text-align: center;
+
+//     // margin-bottom: 10px;
+//     width: 120px;
+//     height: 50px;
+//     line-height: 1.5;
+//     font-size: 1rem;
+//     border-radius: 0.3125rem;
+//     border: 1px solid transparent;
+//     background-color: #359381;
+//     color: white;
+//     cursor: pointer;
+
+//     box-shadow: 0 0.5rem 1.125rem -0.5rem rgba(30, 171, 30, 0.9);
+//     transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out,
+//       border-color 0.25s ease-in-out, box-shadow 0.2s ease-in-out;
+
+//     .fa-shopping-basket {
+//       margin-right: 0.5rem;
+//     }
+
+//     &:hover {
+//       box-shadow: none;
+//     }
+//   }
+// }
+
+// .productCard__image {
+//   border-radius: 26px;
+// }
