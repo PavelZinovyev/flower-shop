@@ -46,7 +46,7 @@ Item.belongsTo(Type);
 Item.hasMany(Basket_item);
 Basket_item.belongsTo(Item);
 
-Item.hasMany(Item_info);
+Item.hasMany(Item_info, { as: 'info' });
 Item_info.belongsTo(Item);
 
 module.exports = {
