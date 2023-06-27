@@ -11,9 +11,7 @@ import AppRouter from './components/AppRouter';
 
 function App() {
   return (
-    // <BrowserRouter>
     <AppRouter />
-    // </BrowserRouter>
 
     // {
     /* <div className="App">
