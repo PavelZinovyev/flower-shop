@@ -8,13 +8,12 @@ import MyButton from './components/UI/button/MyButton';
 import ProductCard from './components/UI/productCard/ProductCard';
 import pic from './components/UI/img/logo_plant.svg';
 import AppRouter from './components/AppRouter';
+import { BrowserRouter } from 'react-router-dom';
 
-function App() {
+const App = () => {
   return (
-    <AppRouter />
-
-    // {
-    /* <div className="App">
+    <BrowserRouter>
+      <div className="App">
         <NavBar>
           <div className="headerLeft">
             <img src={pic} width="60" height="60" alt="sadf"></img>
@@ -39,9 +38,10 @@ function App() {
           <ProductCard />
           <ProductCard />
         </div>
-      </div> */
-    // }
+      </div>
+      <AppRouter />
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
