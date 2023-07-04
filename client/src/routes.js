@@ -3,6 +3,9 @@ import Basket from './pages/Basket';
 import Shop from './pages/Shop';
 import Auth from './pages/Auth';
 import ItemPage from './pages/ItemPage';
+import About from './pages/About';
+import Contacts from './pages/Contacts';
+
 import {
   ADMIN_ROUTE,
   BASKET_ROUTE,
@@ -10,6 +13,8 @@ import {
   LOGIN_ROUTE,
   REGISTRATION_ROUTE,
   ITEM_ROUTE,
+  ABOUT_ROUTE,
+  CONTACTS_ROUTE,
 } from './utils/consts';
 
 export const authRoutes = [
@@ -43,5 +48,13 @@ export const publicRoutes = [
   {
     path: ITEM_ROUTE + '/:id',
     Component: ItemPage,
+  },
+  {
+    path: ABOUT_ROUTE,
+    Component: About,
+  },
+  {
+    path: CONTACTS_ROUTE,
+    Component: Contacts,
   },
 ];

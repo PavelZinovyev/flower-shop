@@ -4,4 +4,5 @@ export const REGISTRATION_ROUTE = '/registration';
 export const SHOP_ROUTE = '/';
 export const BASKET_ROUTE = '/basket';
 export const ITEM_ROUTE = '/item';
- 
+export const ABOUT_ROUTE = '/about';
+export const CONTACTS_ROUTE = '/contacts';
