@@ -66,37 +66,39 @@ class FilterBarMenu extends React.Component {
     ));
 
     return (
-      //   <div>
-      //     <Fade left when={this.state.show}>
-      //       <h1>React Reveal</h1>
-      //     </Fade>
-      //     <button className="btn btn-success my-5" type="button" onClick={this.handleClick}>
-      //       {this.state.show ? 'Hide' : 'Show'} Message
-      //     </button>
-      //   </div>
-      <div className="menu__button">
-        <div className="menu__content">
-          <div className="menu__header" onClick={this.handleClick}>
-            {
-              <button type="button" className="btn filter__header btn-light">
-                {this.props.header}
-              </button>
-            }
-          </div>
-          {this.state.show ? (
-            <Fragment>
-              {buttons.map((button, key) => (
-                <div key={key}>
-                  <Fade left>{button}</Fade>
-                </div>
-              ))}
-              {/* <Fade left>
-              <CloseButton onClick={() => setIsVisible(false)} />
-            </Fade> */}
-            </Fragment>
-          ) : null}
-        </div>
+      <div>
+        <Fade left when={this.state.show}>
+          <h1>React Reveal</h1>
+        </Fade>
+        <button className="btn btn-success my-5" type="button" onClick={this.handleClick}>
+          {this.state.show ? 'Hide' : 'Show'} Message
+        </button>
       </div>
+      //   <div className="menu__button">
+      //     <div className="menu__content">
+      //       <div className="menu__header" onClick={this.handleClick}>
+      //         {
+      //           <button type="button" className="btn filter__header btn-light">
+      //             {this.props.header}
+      //           </button>
+      //         }
+      //       </div>
+      //       {this.state.show ? (
+      //         <Fragment>
+      //           {buttons.map((button, key) => (
+      //             <div key={key}>
+      //               <Fade left when={true}>
+      //                 {button}
+      //               </Fade>
+      //             </div>
+      //           ))}
+      //           {/* <Fade left>
+      //           <CloseButton onClick={() => setIsVisible(false)} />
+      //         </Fade> */}
+      //         </Fragment>
+      //       ) : null}
+      //     </div>
+      //   </div>
     );
   }
 }
