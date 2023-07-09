@@ -9,7 +9,7 @@ const Auth = () => {
   const location = useLocation();
   const isLogin = location.pathname === LOGIN_ROUTE;
 
-  console.log('location-->', location);
+  // console.log('location-->', location);
   return (
     <Container
       className="d-flex justify-content-center align-items-center"

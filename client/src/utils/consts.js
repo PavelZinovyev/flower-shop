@@ -6,3 +6,4 @@ export const BASKET_ROUTE = '/basket';
 export const ITEM_ROUTE = '/item';
 export const ABOUT_ROUTE = '/about';
 export const CONTACTS_ROUTE = '/contacts';
+export const PROFILE_ROUTE = '/profile';

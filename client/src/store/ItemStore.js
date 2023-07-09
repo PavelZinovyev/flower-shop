@@ -3,8 +3,10 @@ import { makeAutoObservable } from 'mobx';
 export default class ItemStore {
   constructor() {
     this._types = [
-      { id: 1, type: 'Succulent' },
-      { id: 2, type: 'Ficus' },
+      { id: 1, name: 'Суккуленты' },
+      { id: 2, name: 'Цитрусовые' },
+      { id: 3, name: 'Ягодные' },
+      { id: 4, name: 'Хвойные' },
     ];
 
     this._items = [
@@ -22,6 +24,8 @@ export default class ItemStore {
       },
     ];
 
+    this._selectedType = {};
+
     makeAutoObservable(this);
   }
 
@@ -33,11 +37,19 @@ export default class ItemStore {
     this._items = items;
   }
 
+  setSelectedType(type) {
+    this._selectedType = type;
+  }
+
   get types() {
     return this._types;
   }
- 
+
   get items() {
     return this._items;
+  }
+
+  get selectedType() {
+    return this._selectedType;
   }
 }

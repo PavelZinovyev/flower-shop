@@ -14,13 +14,13 @@ const App = () => {
     <BrowserRouter>
       <div className="App">
         <NavBar></NavBar>
-        <div className="content">
-          {/* <ProductCard />
+        {/* <div className="content"> */}
+        {/* <ProductCard />
           <ProductCard />
           <ProductCard /> */}
-        </div>
-        <Modal active={modalActive} setActive={setModalActive} />
-        <button onClick={() => setModalActive(true)}>ВЫЗОВ МОДАЛЬНОГО ОКНА</button>
+        {/* </div> */}
+        {/* <Modal active={modalActive} setActive={setModalActive} />
+        <button onClick={() => setModalActive(true)}>ВЫЗОВ МОДАЛЬНОГО ОКНА</button> */}
       </div>
       <AppRouter />
     </BrowserRouter>

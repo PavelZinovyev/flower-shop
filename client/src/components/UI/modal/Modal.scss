@@ -8,17 +8,24 @@
   background-color: rgba(0, 0, 0, 0.4);
   top: 0px;
   left: 0px;
-  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 300ms ease;
 
   &__content {
-    padding: 20px;
+    height: auto;
+    width: auto;
     border-radius: 12px;
-    background-color: white;
-    height: 200px;
-    width: 200px;
+    transition: transform 300ms ease;
+    transform: scale(0.5);
+
+    &.active {
+      transform: scale(1);
+    }
   }
 
   &.active {
-    transform: scale(1);
+    opacity: 1;
+    pointer-events: all;
   }
 }
