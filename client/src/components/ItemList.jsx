@@ -6,8 +6,9 @@ import ItemCard from './ItemCard';
 
 const ItemList = observer(() => {
   const { item } = useContext(Context);
+
   return (
-    <Row className="d-flex">
+    <Row className="d-flex mt-2">
       {item.items.map((item) => (
         <ItemCard key={item.id} item={item} />
       ))}

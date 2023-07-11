@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import './FilterBar.scss';
 import FilterBarMenu from '../filterBarMenu/FilterBarMenu';
+import { Row, Col } from 'react-bootstrap';
 
 const FilterBar = () => {
   const items = [
@@ -10,9 +11,9 @@ const FilterBar = () => {
     { value: 'Хвойные' },
   ];
   return (
-    <div className="menu__wrapper">
+    <Row className="menu__wrapper">
       <FilterBarMenu header={'Фильтр'} items={items}></FilterBarMenu>
-    </div>
+    </Row>
   );
 };
 

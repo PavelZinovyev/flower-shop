@@ -11,13 +11,11 @@ const Shop = () => {
     <Container>
       <Row className="h1 pt-4">Каталог растений</Row>
       <Row>
-        {/* <Col md={3}></Col> */}
-        <Col md={1} className="d-flex mt-4 flex-row">
-          {/* <TypeBar></TypeBar> */}
-        </Col>
         <FilterBar></FilterBar>
-        <ItemList></ItemList>
       </Row>
+      <Col className="d-flex">
+        <ItemList></ItemList>
+      </Col>
     </Container>
   );
 };
