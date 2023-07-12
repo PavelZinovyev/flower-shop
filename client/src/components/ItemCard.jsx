@@ -8,7 +8,7 @@ const ItemCard = ({ item }) => {
       <Card style={{ width: 360, cursor: 'pointer' }} border="light">
         <Image width={360} height={450} src={item.img}></Image>
         <div>
-          <div className="mt-2">Суккулент</div>
+          <div className="mt-2 item__name">{item.name}</div>
         </div>
       </Card>
     </Col>
