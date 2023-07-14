@@ -1,38 +1,10 @@
-// .item-btn.calc {
-//   .fa-calculator {
-//     opacity: 0;
-//     margin-right: 12px;
-//     transition: all 200ms ease;
-//   }
-
-//   &:hover {
-//     .fa-calculator {
-//       opacity: 1;
-//     }
-//   }
-// }
-
-// .item-btn.forum {
-//   .fa-comments {
-//     opacity: 0;
-//     margin-right: 12px;
-//     transition: opacity 200ms ease;
-//   }
-
-//   &:hover {
-//     .fa-comments {
-//       opacity: 1;
-//     }
-//   }
-// }
-
 .App {
   position: relative;
-  max-width: 1920px;
   color: #000000;
   font-size: 14px;
   font-weight: 500;
   font-family: 'Jost';
+  padding: 0;
 }
 
 .header {
@@ -45,11 +17,10 @@
     0px 0px 1px rgba(0, 0, 0, 0.04);
 }
 
-.headerLeft {
+.header__left {
   position: relative;
   display: flex;
   align-items: center;
-  margin-left: 20px;
 
   h3,
   p {
@@ -57,20 +28,19 @@
     color: black;
   }
 
-  .headerInfo {
-    display: flex;
-    align-items: center;
-    flex-flow: column;
-    margin-top: 15px;
+  img {
+    width: 60px;
+    height: 60px;
   }
 }
 
-.login-wrap {
-  position: absolute;
-  display: flex;
-  right: 0;
+.menu__wrapper {
+  margin-right: 33px;
+}
 
-  
+.login-wrap {
+  display: flex;
+  justify-content: end;
 }
 
 .btn-login {
@@ -142,9 +112,33 @@
   }
 }
 
-.card-col {
-  border: 1px solid teal;
-}
+// .item-btn.calc {
+//   .fa-calculator {
+//     opacity: 0;
+//     margin-right: 12px;
+//     transition: all 200ms ease;
+//   }
+
+//   &:hover {
+//     .fa-calculator {
+//       opacity: 1;
+//     }
+//   }
+// }
+
+// .item-btn.forum {
+//   .fa-comments {
+//     opacity: 0;
+//     margin-right: 12px;
+//     transition: opacity 200ms ease;
+//   }
+
+//   &:hover {
+//     .fa-comments {
+//       opacity: 1;
+//     }
+//   }
+// }
 
 // .product {
 //   width: 382px;

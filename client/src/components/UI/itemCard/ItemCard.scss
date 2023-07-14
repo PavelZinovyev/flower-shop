@@ -1,0 +1,21 @@
+.card {
+  border: light;
+  width: 360px;
+  height: 450px;
+  margin-bottom: 5px;
+  cursor: pointer;
+
+  img {
+    width: 360px;
+    height: 450px;
+  }
+}
+
+.card-col {
+  //   border: 1px solid teal;
+  margin-bottom: 20px;
+}
+
+.card__price {
+  margin-top: 10px;
+}

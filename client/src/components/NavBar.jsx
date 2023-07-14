@@ -16,7 +16,7 @@ import { Context } from '../index';
 import { observer } from 'mobx-react-lite';
 import Modal from './UI/modal/Modal';
 import Auth from '../pages/Auth';
-import { Row } from 'react-bootstrap';
+import { Row, Col } from 'react-bootstrap';
 
 const NavBar = observer(() => {
   const { user } = useContext(Context);
@@ -25,27 +25,28 @@ const NavBar = observer(() => {
   return (
     <Row>
       <nav className="header">
-        <div md={1} className="headerLeft">
-          <img src={pic} width="60" height="60" alt="sadf"></img>
-          <div className="headerInfo">
-            <NavLink to={SHOP_ROUTE}></NavLink>
+        <Col>
+          <div className="header__left">
+            <img src={pic} alt="Image not found"></img>
           </div>
-        </div>
-        <Menu>
-          <NavLink to={SHOP_ROUTE}>
-            <MenuItem className="store">Магазин</MenuItem>
-          </NavLink>
-          <NavLink to={ABOUT_ROUTE}>
-            <MenuItem className="about">О нас</MenuItem>
-          </NavLink>
-          <NavLink to={CONTACTS_ROUTE}>
-            <MenuItem className="contacts">Контакты</MenuItem>
-          </NavLink>
-        </Menu>
+        </Col>
+        <Col md={4} className="menu__wrapper">
+          <Menu>
+            <NavLink to={SHOP_ROUTE}>
+              <MenuItem className="store">Магазин</MenuItem>
+            </NavLink>
+            <NavLink to={ABOUT_ROUTE}>
+              <MenuItem className="about">О нас</MenuItem>
+            </NavLink>
+            <NavLink to={CONTACTS_ROUTE}>
+              <MenuItem className="contacts">Контакты</MenuItem>
+            </NavLink>
+          </Menu>
+        </Col>
         {/* если пользователь зарегистрирован, то при нажатии на див с человечком открывается профиль пользователя */}
         {/* если пользователь НЕ зарегистрирован, то при нажатии на див с человечком открывается модальное окно с предложением зарегистрироваться */}
         {user.isAuth ? (
-          <div className="login-wrap">
+          <Col md={7} className="col login-wrap">
             <MyButton onClick={() => user.setAuth(false)}>Выйти из аккаунта</MyButton>
             <NavLink to={ADMIN_ROUTE}>
               <MenuItem className="contacts">Админка</MenuItem>
@@ -55,9 +56,9 @@ const NavBar = observer(() => {
                 <i className="fa-regular fa-user"></i>
               </MyButton>
             </NavLink>
-          </div>
+          </Col>
         ) : (
-          <div className="login-wrap">
+          <Col md={7} className="login-wrap">
             <MyButton onClick={() => user.setAuth(true)}>Войти без пароля</MyButton>
             <MyButton
               onClick={() => {
@@ -67,7 +68,7 @@ const NavBar = observer(() => {
             >
               <i className="fa-regular fa-user"></i>
             </MyButton>
-          </div>
+          </Col>
         )}
         <Modal active={modalActive} setActive={setModalActive}>
           <Auth />

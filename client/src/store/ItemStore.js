@@ -13,25 +13,25 @@ export default class ItemStore {
       {
         id: 1,
         name: 'Эхеверия',
-        price: 1190,
+        price: '1 190',
         img: 'https://www.thespruce.com/thmb/mJjTRS-W8v0odfOvOXcDU3fSp2Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/succulents-1402043-hero-17719e8ed83f41a5bd0ba84f35f4beb9.jpg ',
       },
       {
         id: 2,
         name: 'Фикус',
-        price: 3399,
+        price: '3 399',
         img: 'https://static.tildacdn.com/tild3231-3764-4636-b930-613439333535/2-50-700x678.jpg',
       },
       {
         id: 3,
         name: 'Эхеверия',
-        price: 1200,
+        price: '1 200',
         img: 'https://www.thespruce.com/thmb/mJjTRS-W8v0odfOvOXcDU3fSp2Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/succulents-1402043-hero-17719e8ed83f41a5bd0ba84f35f4beb9.jpg ',
       },
       {
         id: 4,
         name: 'Фикус',
-        price: 700,
+        price: '700',
         img: 'https://static.tildacdn.com/tild3231-3764-4636-b930-613439333535/2-50-700x678.jpg',
       },
     ];
