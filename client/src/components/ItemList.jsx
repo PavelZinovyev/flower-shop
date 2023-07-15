@@ -16,7 +16,7 @@ const ItemList = observer(() => {
   // подумать над кнопкой фильтр
 
   return (
-    <Row className="d-flex mt-2">
+    <Row className="content-wrapper">
       {item.items.map((item, i) => (
         <ProductCard key={item.id} item={item} />
       ))}

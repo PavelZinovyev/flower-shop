@@ -17,6 +17,7 @@ const paginationActive = (event) => {
 
     if (currentItem) currentItem.ref.current.classList.remove('active');
 
+    //
     currentItem = paginations.find((item) => {
       return item.props['data-index'] == hoverImageIndex;
     });
@@ -27,21 +28,26 @@ const paginationActive = (event) => {
 
 const paginationReset = (event) => {
   if (needPaginations) {
+    console.log('paginations[0]---->', paginations[0]);
     paginations.forEach((item) => item.ref.current.classList.remove('active'));
     paginations[0].ref.current.classList.add('active');
   }
 };
 
-class ProductCard extends React.Component {
-  element = React.createRef();
+const generateKey = (pre) => {
+  const key = `${pre}_${new Date().getTime()}`;
 
+  return key;
+};
+
+class ProductCard extends React.Component {
   constructor(props) {
     super(props);
   }
 
   render() {
     return (
-      <Col md={4}>
+      <Col md={4} className="card-wrapper">
         <article className="product">
           <div className="product__image">
             <div className="product__switch image-switch">
@@ -79,7 +85,7 @@ class ProductCard extends React.Component {
                 : null}
             </ul>
           </div>
-          <h3 className="product__title">Эчеверия</h3>
+          <h3 className="product__title">{this.props.item.name}</h3>
           <div className="product-price">
             <span className="product-price__current">{`${this.props.item.price} р.`}</span>
           </div>
