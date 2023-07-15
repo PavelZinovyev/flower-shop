@@ -21,7 +21,7 @@ class ProductCard extends React.Component {
   constructor(props) {
     super(props);
     this.paginationActive = (event) => {
-      const paginations = this.paginations;
+      const { paginations } = this;
 
       if (needPaginations) {
         paginations.forEach((item) => item.ref.current.classList.remove('active'));
@@ -37,7 +37,7 @@ class ProductCard extends React.Component {
       }
     };
     this.paginationReset = () => {
-      const paginations = this.paginations;
+      const { paginations } = this;
 
       if (needPaginations) {
         paginations.forEach((item) => item.ref.current.classList.remove('active'));
