@@ -5,34 +5,11 @@ import cardImg1 from './img/card_flower/echeveria_1.jpeg';
 import cardImg2 from './img/card_flower/echeveria_2.jpeg';
 import cardImg3 from './img/card_flower/echeveria_3.jpeg';
 
+// добавить картинки каждому айтему в стор
+
 let currentItem;
 const images = [cardImg1, cardImg2, cardImg3];
-const paginations = [];
 const needPaginations = images.length > 1;
-
-const paginationActive = (event) => {
-  if (needPaginations) {
-    paginations.forEach((item) => item.ref.current.classList.remove('active'));
-    const hoverImageIndex = event.currentTarget.dataset.index;
-
-    if (currentItem) currentItem.ref.current.classList.remove('active');
-
-    //
-    currentItem = paginations.find((item) => {
-      return item.props['data-index'] == hoverImageIndex;
-    });
-
-    currentItem.ref.current.classList.add('active');
-  }
-};
-
-const paginationReset = (event) => {
-  if (needPaginations) {
-    console.log('paginations[0]---->', paginations[0]);
-    paginations.forEach((item) => item.ref.current.classList.remove('active'));
-    paginations[0].ref.current.classList.add('active');
-  }
-};
 
 const generateKey = (pre) => {
   const key = `${pre}_${new Date().getTime()}`;
@@ -43,9 +20,35 @@ const generateKey = (pre) => {
 class ProductCard extends React.Component {
   constructor(props) {
     super(props);
+    this.paginationActive = (event) => {
+      const paginations = this.paginations;
+
+      if (needPaginations) {
+        paginations.forEach((item) => item.ref.current.classList.remove('active'));
+        const hoverImageIndex = event.currentTarget.dataset.index;
+
+        if (currentItem) currentItem.ref.current.classList.remove('active');
+
+        currentItem = paginations.find((item) => {
+          return item.props['data-index'] == hoverImageIndex;
+        });
+
+        currentItem.ref.current.classList.add('active');
+      }
+    };
+    this.paginationReset = () => {
+      const paginations = this.paginations;
+
+      if (needPaginations) {
+        paginations.forEach((item) => item.ref.current.classList.remove('active'));
+        paginations[0].ref.current.classList.add('active');
+      }
+    };
   }
 
   render() {
+    this.paginations = [];
+
     return (
       <Col md={4} className="card-wrapper">
         <article className="product">
@@ -55,8 +58,8 @@ class ProductCard extends React.Component {
                 return (
                   <div
                     className="image-switch__item"
-                    onMouseEnter={paginationActive}
-                    onMouseOut={paginationReset}
+                    onMouseEnter={this.paginationActive}
+                    onMouseOut={this.paginationReset}
                     data-index={i}
                     key={src}
                   >
@@ -78,7 +81,8 @@ class ProductCard extends React.Component {
                         key={num}
                       ></li>
                     );
-                    paginations.push(item);
+
+                    this.paginations.push(item);
 
                     return item;
                   })
