@@ -6,6 +6,7 @@ import cardImg2 from './img/card_flower/echeveria_2.jpeg';
 import cardImg3 from './img/card_flower/echeveria_3.jpeg';
 
 // добавить картинки каждому айтему в стор
+// test
 
 let currentItem;
 const images = [cardImg1, cardImg2, cardImg3];
