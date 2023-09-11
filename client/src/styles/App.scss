@@ -8,7 +8,7 @@
   padding: 0;
 }
 
-.header {
+.navbar {
   position: fixed;
   display: flex;
   align-items: center;
@@ -23,7 +23,7 @@
     0px 0px 1px rgba(0, 0, 0, 0.04);
 }
 
-.header__logo {
+.navbar__logo {
   position: relative;
   display: flex;
   align-items: center;

@@ -11,12 +11,6 @@ let currentItem;
 const images = [cardImg1, cardImg2, cardImg3];
 const needPaginations = images.length > 1;
 
-const generateKey = (pre) => {
-  const key = `${pre}_${new Date().getTime()}`;
-
-  return key;
-};
-
 class ProductCard extends React.Component {
   constructor(props) {
     super(props);
@@ -44,6 +38,11 @@ class ProductCard extends React.Component {
         paginations[0].ref.current.classList.add('active');
       }
     };
+    this.generateKey = (pre) => {
+      const key = `${pre}_${new Date().getTime()}`;
+
+      return key;
+    };
   }
 
   render() {
@@ -61,7 +60,7 @@ class ProductCard extends React.Component {
                     onMouseEnter={this.paginationActive}
                     onMouseOut={this.paginationReset}
                     data-index={i}
-                    key={src}
+                    key={this.generateKey(src)}
                   >
                     <div className="image-switch__img">
                       <img src={src} alt="Суккулент"></img>
@@ -78,7 +77,7 @@ class ProductCard extends React.Component {
                         className={`image-pagination__item ${i === 0 ? 'active' : ''}`}
                         data-index={i}
                         ref={React.createRef(i)}
-                        key={num}
+                        key={this.generateKey(num)}
                       ></li>
                     );
 
